@@ -64,8 +64,10 @@
 - **到大医院：** 三亚中心医院 开车约 21 分钟（7 公里）
 - 有海，租金低，但去医院要多走一段。
 
-## 租房提醒
+## 出发前准备（长辈出行通用）
 
+- 带上病历和常用药
+- 办好**异地就医备案**（国家医保服务平台 App）
 - 春节前后租金会涨，提前订
 
 # 往期和预告
@@ -82,6 +84,7 @@
 - [三亚月均气温（Trip.com）](https://hk.trip.com/guide/destination/%E4%B8%89%E4%BA%9E%E5%A4%A9%E6%B0%A3.html)
 - [三亚租房挂牌（58 同城）](https://sanya.58.com/zufang/)
 - [吉阳租房挂牌（房天下）](https://m.fang.com/houses/zf_17704_sanya/)
+- [海南异地就医备案](https://paper.people.com.cn/hwbwap/html/2024-03/08/content_26045613.htm)
 - 医院位置和车程：Google Maps
 
 此页只做生活参考。
