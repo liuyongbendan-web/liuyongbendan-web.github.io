@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每周越冬城市</title>
+<style>
+:root{--bg:#F2F6F7;--surface:#FFFFFF;--ink:#0E2128;--ink-soft:#3C535B;--line:#C4D3D8;--accent:#0A6670;--accent-ink:#FFFFFF;--font-body:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",system-ui,sans-serif;--fs-base:1.5rem;--fs-small:1.25rem;--fs-h2:2rem;--fs-h1:2.75rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0C171B;--surface:#14262C;--ink:#EAF3F5;--ink-soft:#A9C0C7;--line:#2B444C;--accent:#5CC6D0;--accent-ink:#06191D;color-scheme:dark}}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--fs-base);line-height:1.7;margin:0;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-wrap:anywhere}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3,p,ul{margin:0}
+h1{font-size:var(--fs-h1);line-height:1.25;font-weight:800}
+h2{font-size:var(--fs-h2);line-height:1.3;font-weight:800}
+h3{font-size:1.625rem;line-height:1.35;font-weight:800}
+ul{padding-left:1.3em;display:flex;flex-direction:column;gap:10px}
+strong{font-weight:800}
+a{color:var(--accent);font-weight:700;text-underline-offset:4px}
+.top{display:flex;flex-direction:column;gap:10px}
+.stamp{font-size:var(--fs-small);color:var(--ink-soft)}
+.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.nav a{display:flex;align-items:center;justify-content:center;min-height:64px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-size:1.5rem;font-weight:800;border-radius:14px;padding:8px 12px;text-align:center}
+.hero{background:var(--accent);color:var(--accent-ink);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:12px}
+.hero .week{font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;opacity:.9}
+.hero .city{font-size:4rem;line-height:1.1;font-weight:900}
+.hero .line{font-size:1.625rem;line-height:1.5;font-weight:700}
+.sec{display:flex;flex-direction:column;gap:16px;scroll-margin-top:16px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .tag{align-self:flex-start;background:var(--accent);color:var(--accent-ink);font-size:var(--fs-small);font-weight:800;padding:2px 14px;border-radius:999px}
+.card .tag.alt{background:transparent;color:var(--ink);border:2px solid var(--ink-soft)}
+.row{display:flex;flex-direction:column;gap:2px}
+.k{font-size:var(--fs-small);color:var(--ink-soft);font-weight:700}
+.v{font-size:var(--fs-base);font-weight:700}
+.big{font-size:2.5rem;line-height:1.2;font-weight:900;color:var(--accent)}
+.soft{color:var(--ink-soft);font-size:var(--fs-small)}
+.score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.score div{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.score b{color:var(--accent);font-size:1.75rem}
+.later li{font-weight:700}
+.sources{font-size:var(--fs-small);color:var(--ink-soft)}
+.sources ul{gap:6px}
+@media (max-width:420px){:root{--fs-base:1.4375rem;--fs-h1:2.375rem}.hero .city{font-size:3.5rem}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <h1>每周越冬城市</h1>
+    <p class="stamp">为妈妈整理 · 每周一更新 · 本期更新于 2026 年 11 月 2 日</p>
+  </header>
+
+  <nav class="nav" aria-label="跳到">
+    <a href="#now">本周推荐</a>
+    <a href="#live">住哪里</a>
+    <a href="#past">往期和预告</a>
+    <a href="#src">资料来源</a>
+  </nav>
+
+  <section class="hero" id="now" aria-label="本周推荐">
+    <p class="week">第 1 周 · 11 月 2 日</p>
+    <p class="city">三亚</p>
+    <p class="line">最稳的起点。青岛有直飞，大医院近，冬天不冷。</p>
+    <p class="line">缺点：房租比其他城市高。</p>
+  </section>
+
+  <section class="sec" aria-label="为什么选三亚">
+    <h2>为什么是三亚</h2>
+    <div class="card">
+      <div class="row"><span class="k">冬天气温</span><span class="v">12 月 20–27°C　1 月 18–26°C　2 月 19–27°C</span></div>
+      <div class="row"><span class="k">空气湿度</span><span class="v">白天约 58–66%，夜里 70–83%</span></div>
+      <p class="soft">湿度来自往年预报页的样本。紫外线强，出门要打伞、戴帽子。</p>
+    </div>
+    <div class="card">
+      <div class="row"><span class="k">从青岛怎么去</span><span class="v">青岛直飞三亚，11 月 16 日开始，每天 1 班</span></div>
+      <div class="row"><span class="k">飞行时间</span><span class="big">约 3 小时 45 分</span></div>
+      <p class="soft">这个航班一直飞到 2027 年 3 月 27 日。机票价格还没查到。</p>
+    </div>
+    <div class="card">
+      <div class="row"><span class="k">老人多不多</span><span class="v">三亚是全国冬天最受欢迎的“候鸟”城市，2025 年冬季排名第 1</span></div>
+      <p class="soft">来自上海交大的排名。山东老人有多少，还没查到。</p>
+    </div>
+    <div>
+      <h3>我的打分（满分 5 分）</h3>
+      <p class="soft">这是我的看法，不是官方数据。</p>
+    </div>
+    <div class="score" role="list">
+      <div role="listitem"><span>买东西</span><b>5</b></div>
+      <div role="listitem"><span>交通</span><b>5</b></div>
+      <div role="listitem"><span>医院</span><b>4</b></div>
+      <div role="listitem"><span>设施</span><b>4</b></div>
+      <div role="listitem"><span>环境</span><b>4</b></div>
+      <div role="listitem"><span>气候</span><b>4</b></div>
+      <div role="listitem"><span>人情</span><b>4</b></div>
+      <div role="listitem"><span>像青岛</span><b>3</b></div>
+      <div role="listitem"><span>房租便宜</span><b>2</b></div>
+    </div>
+  </section>
+
+  <section class="sec" id="live" aria-label="住哪里">
+    <h2>住哪里</h2>
+    <p>三个片区，都是真实挂牌的小区。月租是挂牌价，没有日期，只能当大概的参考。</p>
+
+    <article class="card">
+      <span class="tag">首选</span>
+      <h3>A　三亚湾 · 海月广场一带</h3>
+      <div class="row"><span class="k">小区</span><span class="v">海坡安置小区　珠江俪豪</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">海坡 2 房 83㎡ 约 2500 元</span></div>
+      <div class="row"><span class="k">到大医院</span><span class="v">三亚市人民医院 开车约 6 分钟（1.7 公里）<br>三亚中心医院 开车约 10 分钟（2 公里）</span></div>
+      <p class="soft">离海近，离医院近。傍晚海月广场有很多人跳广场舞。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag alt">备选</span>
+      <h3>B　河东 · 金鸡岭 · 解放路</h3>
+      <div class="row"><span class="k">小区</span><span class="v">汇丰国际度假公寓　恒大美丽之冠　福瑞国际公馆　金鸡岭四组安置小区</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">汇丰国际 2 房约 2600 元<br>福瑞国际 2 房约 2000 元<br>恒大美丽之冠 34㎡ 约 1800 元</span></div>
+      <p class="soft">老牌的候鸟老人聚居区，附近有临春岭公园。离大医院的车程还没量。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag alt">便宜但远</span>
+      <h3>C　大东海</h3>
+      <div class="row"><span class="k">小区</span><span class="v">海韵苑　京汇达候鸟屋　鸿洲时代海岸</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">京汇达 1 房约 1700 元<br>海韵苑 1 房约 2000 元<br>鸿洲时代海岸 68㎡ 约 2500–2800 元</span></div>
+      <div class="row"><span class="k">到大医院</span><span class="v">三亚中心医院 开车约 21 分钟（7 公里）</span></div>
+      <p class="soft">有海，租金低，但去医院要多走一段。</p>
+    </article>
+
+    <div class="card">
+      <h3>出发前准备</h3>
+      <ul>
+        <li>带上病历和常用药</li>
+        <li>办好<strong>异地就医备案</strong>（国家医保服务平台 App）</li>
+        <li>春节前后租金会涨，提前订</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="past" aria-label="往期和预告">
+    <h2>往期和预告</h2>
+    <div class="card">
+      <span class="tag">本期</span>
+      <h3>第 1 周　三亚</h3>
+      <p class="soft">11 月 2 日 · 就是上面这些内容</p>
+    </div>
+    <div class="card">
+      <h3>接下来的计划</h3>
+      <p class="soft">顺序可能调整。</p>
+      <ul class="later">
+        <li>第 2 周　海口</li>
+        <li>第 3 周　北海</li>
+        <li>第 4 周　南宁</li>
+        <li>第 5 周　昆明</li>
+        <li>第 6 周　厦门或漳州</li>
+        <li>第 7 周　珠海</li>
+        <li>第 8 周　湛江，或防城港、东兴</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sources" id="src" aria-label="资料来源">
+    <h2 style="color:var(--ink)">资料来源</h2>
+    <ul>
+      <li><a href="https://finance.sina.cn/2025-12-01/detail-infzhauk4373948.d.html" rel="noopener">2025 冬季候鸟式养老指数</a></li>
+      <li><a href="https://m.dzplus.dzng.com/share/general/0/NEWS3767384NSKIRCZAFEFRV" rel="noopener">青岛直飞三亚航线</a></li>
+      <li><a href="https://news.10jqka.com.cn/20261025/c681057256.shtml" rel="noopener">2026–27 冬春航季</a></li>
+      <li><a href="https://hk.trip.com/guide/destination/%E4%B8%89%E4%BA%9E%E5%A4%A9%E6%B0%A3.html" rel="noopener">三亚月均气温（Trip.com）</a></li>
+      <li><a href="https://sanya.58.com/zufang/" rel="noopener">三亚租房挂牌（58 同城）</a></li>
+      <li><a href="https://m.fang.com/houses/zf_17704_sanya/" rel="noopener">吉阳租房挂牌（房天下）</a></li>
+      <li><a href="https://paper.people.com.cn/hwbwap/html/2024-03/08/content_26045613.htm" rel="noopener">海南异地就医备案</a></li>
+      <li>医院位置和车程：Google Maps</li>
+    </ul>
+    <p>此页只做生活参考。</p>
+  </section>
+</div>
+
+</body>
+</html>
