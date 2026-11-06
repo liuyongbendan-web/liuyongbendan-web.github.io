@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>每周越冬城市</title>
 <style>
-:root{--bg:#F2F6F7;--surface:#FFFFFF;--ink:#0E2128;--ink-soft:#3C535B;--line:#C4D3D8;--accent:#0A6670;--accent-ink:#FFFFFF;--font-body:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",system-ui,sans-serif;--fs-base:1.5rem;--fs-small:1.25rem;--fs-h2:2rem;--fs-h1:2.75rem}
-@media (prefers-color-scheme:dark){:root{--bg:#0C171B;--surface:#14262C;--ink:#EAF3F5;--ink-soft:#A9C0C7;--line:#2B444C;--accent:#5CC6D0;--accent-ink:#06191D;color-scheme:dark}}
+:root{--bg:#F2F6F7;--surface:#FFFFFF;--ink:#0E2128;--ink-soft:#3C535B;--line:#C4D3D8;--accent:#0A6670;--accent-ink:#FFFFFF;--warn-bg:#FFF1CC;--warn-ink:#4A3300;--warn-line:#D9A72B;--font-body:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",system-ui,sans-serif;--fs-base:1.5rem;--fs-small:1.4375rem;--fs-h2:2rem;--fs-h1:2.75rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C171B;--surface:#14262C;--ink:#EAF3F5;--ink-soft:#A9C0C7;--line:#2B444C;--accent:#5CC6D0;--accent-ink:#06191D;--warn-bg:#3A2D08;--warn-ink:#FFE9A8;--warn-line:#B88A1B;color-scheme:dark}}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--fs-base);line-height:1.7;margin:0;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-wrap:anywhere}
 .wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
@@ -33,53 +33,54 @@ a{color:var(--accent);font-weight:700;text-underline-offset:4px}
 .k{font-size:var(--fs-small);color:var(--ink-soft);font-weight:700}
 .v{font-size:var(--fs-base);font-weight:700}
 .big{font-size:2.5rem;line-height:1.2;font-weight:900;color:var(--accent)}
+.note{background:var(--warn-bg);color:var(--warn-ink);border:2px solid var(--warn-line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.note h3{font-size:1.5rem}
 .soft{color:var(--ink-soft);font-size:var(--fs-small)}
 .score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .score div{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .score b{color:var(--accent);font-size:1.75rem}
 .later li{font-weight:700}
+details.past{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:16px 20px}
+details.past summary{font-size:1.75rem;font-weight:800;cursor:pointer;line-height:1.4}
+details.past .inner{display:flex;flex-direction:column;gap:12px;margin-top:12px}
 .sources{font-size:var(--fs-small);color:var(--ink-soft)}
 .sources ul{gap:6px}
 @media (max-width:420px){:root{--fs-base:1.4375rem;--fs-h1:2.375rem}.hero .city{font-size:3.5rem}}
 </style>
 </head>
 <body>
-
 <div class="wrap">
   <header class="top">
     <h1>每周越冬城市</h1>
-    <p class="stamp">为长辈整理 · 每周一更新 · 本期更新于 2026 年 11 月 2 日</p>
+    <p class="stamp">为长辈整理 · 每周一更新 · 本期更新于 2026 年 11 月 6 日</p>
   </header>
-
   <nav class="nav" aria-label="跳到">
     <a href="#now">本周推荐</a>
     <a href="#live">住哪里</a>
     <a href="#past">往期和预告</a>
     <a href="#src">资料来源</a>
   </nav>
-
   <section class="hero" id="now" aria-label="本周推荐">
-    <p class="week">第 1 周 · 11 月 2 日</p>
-    <p class="city">三亚</p>
-    <p class="line">最稳的起点。青岛有直飞，大医院近，冬天不冷。</p>
-    <p class="line">缺点：房租比其他城市高。</p>
+    <p class="week">第 2 周 · 11 月 6 日</p>
+    <p class="city">海口</p>
+    <p class="line">海南的省会，三甲大医院最集中，冬天比三亚凉一点。</p>
+    <p class="line">缺点：冬天偏凉、有阴雨，和青岛差别大；青岛直飞的班次还要再核实。</p>
   </section>
-
-  <section class="sec" aria-label="为什么选三亚">
-    <h2>为什么是三亚</h2>
+  <section class="sec" aria-label="为什么选海口">
+    <h2>为什么是海口</h2>
     <div class="card">
-      <div class="row"><span class="k">冬天气温</span><span class="v">12 月 20–27°C　1 月 18–26°C　2 月 19–27°C</span></div>
-      <div class="row"><span class="k">空气湿度</span><span class="v">白天约 58–66%，夜里 70–83%</span></div>
-      <p class="soft">湿度来自往年预报页的样本。紫外线强，出门要打伞、戴帽子。</p>
+      <div class="row"><span class="k">冬天气温（月均）</span><span class="v">12 月 18–21°C　1 月 17–20°C　2 月 18–22°C　3 月 20–25°C</span></div>
+      <div class="row"><span class="k">空气湿度</span><span class="v">待核实</span></div>
+      <p class="soft">气温来自一个旅游气候网站的月均值，3 月偶有春雨。比三亚凉，早晚可能要加外套。</p>
     </div>
     <div class="card">
-      <div class="row"><span class="k">从青岛怎么去</span><span class="v">青岛直飞三亚，11 月 16 日开始，每天 1 班</span></div>
-      <div class="row"><span class="k">飞行时间</span><span class="big">约 3 小时 45 分</span></div>
-      <p class="soft">这个航班一直飞到 2027 年 3 月 27 日。机票价格还没查到。</p>
+      <div class="row"><span class="k">从青岛怎么去</span><span class="v">2023 年 10 月开通青岛—海口直飞，东航、南航、首都航空每家每天 1 班</span></div>
+      <div class="row"><span class="k">飞行时间</span><span class="big">约 3 小时 25 分</span></div>
+      <p class="soft">这是 2023 年的报道，今年冬春航季的班次待核实。有网站只列出每周 5 班，两边对不上，出发前请在航司 App 上确认。机票价格待核实。</p>
     </div>
     <div class="card">
-      <div class="row"><span class="k">老人多不多</span><span class="v">三亚是全国冬天最受欢迎的“候鸟”城市，2025 年冬季排名第 1</span></div>
-      <p class="soft">来自上海交大的排名。山东老人有多少，还没查到。</p>
+      <div class="row"><span class="k">老人多不多</span><span class="v">待核实</span></div>
+      <p class="soft">没有查到海口在候鸟城市排名里的名次，山东老人有多少也待核实。</p>
     </div>
     <div>
       <h3>我的打分（满分 5 分）</h3>
@@ -87,47 +88,46 @@ a{color:var(--accent);font-weight:700;text-underline-offset:4px}
     </div>
     <div class="score" role="list">
       <div role="listitem"><span>买东西</span><b>5</b></div>
-      <div role="listitem"><span>交通</span><b>5</b></div>
-      <div role="listitem"><span>医院</span><b>4</b></div>
+      <div role="listitem"><span>交通</span><b>4</b></div>
+      <div role="listitem"><span>医院</span><b>5</b></div>
       <div role="listitem"><span>设施</span><b>4</b></div>
-      <div role="listitem"><span>环境</span><b>4</b></div>
-      <div role="listitem"><span>气候</span><b>4</b></div>
-      <div role="listitem"><span>人情</span><b>4</b></div>
-      <div role="listitem"><span>像青岛</span><b>3</b></div>
-      <div role="listitem"><span>房租便宜</span><b>2</b></div>
+      <div role="listitem"><span>环境</span><b>3</b></div>
+      <div role="listitem"><span>气候</span><b>3</b></div>
+      <div role="listitem"><span>人情</span><b>3</b></div>
+      <div role="listitem"><span>像青岛</span><b>2</b></div>
+      <div role="listitem"><span>房租便宜</span><b>3</b></div>
     </div>
   </section>
-
   <section class="sec" id="live" aria-label="住哪里">
     <h2>住哪里</h2>
-    <p>三个片区，都是真实挂牌的小区。月租是挂牌价，没有日期，只能当大概的参考。</p>
-
+    <p>三个片区。只写查到的真实小区；月租是挂牌价，页面没有日期，只能当大概参考；没查到的写“待核实”。车程是谷歌地图的估算。</p>
     <article class="card">
       <span class="tag">首选</span>
-      <h3>A　三亚湾 · 海月广场一带</h3>
-      <div class="row"><span class="k">小区</span><span class="v">海坡安置小区　珠江俪豪</span></div>
-      <div class="row"><span class="k">月租</span><span class="v">海坡 2 房 83㎡ 约 2500 元</span></div>
-      <div class="row"><span class="k">到大医院</span><span class="v">三亚市人民医院 开车约 6 分钟（1.7 公里）<br>三亚中心医院 开车约 10 分钟（2 公里）</span></div>
-      <p class="soft">离海近，离医院近。傍晚海月广场有很多人跳广场舞。</p>
+      <h3>A　国贸 · 万绿园 · 龙昆北路</h3>
+      <div class="row"><span class="k">小区</span><span class="v">龙珠新城（其他小区待核实）</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">龙珠新城 1 房 35–45㎡ 约 1500 元<br>2 房 115㎡ 约 2500 元</span></div>
+      <div class="row"><span class="k">到大医院</span><span class="v">海口市人民医院 开车约 12 分钟（7.5 公里）<br>海南省人民医院 开车约 14 分钟（8.3 公里）</span></div>
+      <div class="row"><span class="k">到农贸市场</span><span class="v">东门市场 开车约 13 分钟（4.7 公里）</span></div>
+      <p class="soft">附近有万绿园，是海口有名的大公园。小区旁的超市待核实。</p>
     </article>
-
     <article class="card">
       <span class="tag alt">备选</span>
-      <h3>B　河东 · 金鸡岭 · 解放路</h3>
-      <div class="row"><span class="k">小区</span><span class="v">汇丰国际度假公寓　恒大美丽之冠　福瑞国际公馆　金鸡岭四组安置小区</span></div>
-      <div class="row"><span class="k">月租</span><span class="v">汇丰国际 2 房约 2600 元<br>福瑞国际 2 房约 2000 元<br>恒大美丽之冠 34㎡ 约 1800 元</span></div>
-      <p class="soft">老牌的候鸟老人聚居区，附近有临春岭公园。离大医院的车程还没量。</p>
+      <h3>B　海甸岛</h3>
+      <div class="row"><span class="k">小区</span><span class="v">海岸雅居（其他小区待核实）</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">海岸雅居 2 房 88㎡ 约 2500–2600 元</span></div>
+      <div class="row"><span class="k">到大医院</span><span class="v">海口市人民医院 开车约 6 分钟（1.4 公里）<br>海南省人民医院 开车约 24 分钟（14 公里）</span></div>
+      <div class="row"><span class="k">到农贸市场</span><span class="v">东门市场 开车约 22 分钟（6 公里）</span></div>
+      <p class="soft">岛上靠海，但地图定位只是大概位置，车程请到现场再核对。</p>
     </article>
-
     <article class="card">
-      <span class="tag alt">便宜但远</span>
-      <h3>C　大东海</h3>
-      <div class="row"><span class="k">小区</span><span class="v">海韵苑　京汇达候鸟屋　鸿洲时代海岸</span></div>
-      <div class="row"><span class="k">月租</span><span class="v">京汇达 1 房约 1700 元<br>海韵苑 1 房约 2000 元<br>鸿洲时代海岸 68㎡ 约 2500–2800 元</span></div>
-      <div class="row"><span class="k">到大医院</span><span class="v">三亚中心医院 开车约 21 分钟（7 公里）</span></div>
-      <p class="soft">有海，租金低，但去医院要多走一段。</p>
+      <span class="tag alt">离大医院最近</span>
+      <h3>C　秀英 · 海南省人民医院附近</h3>
+      <div class="row"><span class="k">小区</span><span class="v">广达商住楼（其他小区待核实）</span></div>
+      <div class="row"><span class="k">月租</span><span class="v">待核实</span></div>
+      <div class="row"><span class="k">到大医院</span><span class="v">海南省人民医院 开车约 7 分钟（1.8 公里）</span></div>
+      <div class="row"><span class="k">到农贸市场</span><span class="v">待核实</span></div>
+      <p class="soft">离医院最近，但离海和市中心比较远。</p>
     </article>
-
     <div class="card">
       <h3>出发前准备</h3>
       <p class="soft">长辈出行通用提醒</p>
@@ -138,19 +138,25 @@ a{color:var(--accent);font-weight:700;text-underline-offset:4px}
       </ul>
     </div>
   </section>
-
   <section class="sec" id="past" aria-label="往期和预告">
     <h2>往期和预告</h2>
-    <div class="card">
-      <span class="tag">本期</span>
-      <h3>第 1 周　三亚</h3>
-      <p class="soft">11 月 2 日 · 就是上面这些内容</p>
-    </div>
+    <details class="past">
+      <summary>第 1 周 · 11 月 2 日 · 三亚</summary>
+      <div class="inner">
+        <p class="soft">11 月 2 日</p>
+        <p><strong>一句话：</strong>最稳的起点。青岛有直飞（11 月 16 日起每天 1 班，约 3 小时 45 分），大医院近，冬天不冷。缺点：房租比其他城市高。</p>
+        <ul>
+          <li>气温：12 月 20–27°C　1 月 18–26°C　2 月 19–27°C</li>
+          <li>首选三亚湾 · 海月广场一带（海坡安置小区、珠江俪豪），到三亚市人民医院开车约 6 分钟</li>
+          <li>备选河东 · 金鸡岭 · 解放路；便宜但远的大东海</li>
+          <li>月租参考 1700–2800 元</li>
+        </ul>
+      </div>
+    </details>
     <div class="card">
       <h3>接下来的计划</h3>
       <p class="soft">顺序可能调整。</p>
       <ul class="later">
-        <li>第 2 周　海口</li>
         <li>第 3 周　北海</li>
         <li>第 4 周　南宁</li>
         <li>第 5 周　昆明</li>
@@ -160,18 +166,19 @@ a{color:var(--accent);font-weight:700;text-underline-offset:4px}
       </ul>
     </div>
   </section>
-
   <section class="sec sources" id="src" aria-label="资料来源">
     <h2 style="color:var(--ink)">资料来源</h2>
     <ul>
-      <li><a href="https://finance.sina.cn/2025-12-01/detail-infzhauk4373948.d.html" rel="noopener">2025 冬季候鸟式养老指数</a></li>
-      <li><a href="https://m.dzplus.dzng.com/share/general/0/NEWS3767384NSKIRCZAFEFRV" rel="noopener">青岛直飞三亚航线</a></li>
-      <li><a href="https://news.10jqka.com.cn/20261025/c681057256.shtml" rel="noopener">2026–27 冬春航季</a></li>
-      <li><a href="https://hk.trip.com/guide/destination/%E4%B8%89%E4%BA%9E%E5%A4%A9%E6%B0%A3.html" rel="noopener">三亚月均气温（Trip.com）</a></li>
-      <li><a href="https://sanya.58.com/zufang/" rel="noopener">三亚租房挂牌（58 同城）</a></li>
-      <li><a href="https://m.fang.com/houses/zf_17704_sanya/" rel="noopener">吉阳租房挂牌（房天下）</a></li>
+      <li><a href="https://www.qingdaonews.com/app/content/2023-10/26/content_23504061.htm" rel="noopener">青岛—海口直航开通报道（2023）</a></li>
+      <li><a href="https://www.tianxun.com/routes/hak/tao/haikou-to-qingdao.html" rel="noopener">海口—青岛航班（天巡，2026 年 11 月数据）</a></li>
+      <li><a href="https://www.eastchinatrip.com/zh-hant/chinese-weather/haikou-weather/" rel="noopener">海口月均气温（eastchinatrip）</a></li>
+      <li><a href="https://www.haodf.com/hospital/list-46.html" rel="noopener">海口医院等级列表（好大夫）</a></li>
+      <li><a href="https://m.58.com/haikou/xq/626419/r2/" rel="noopener">海岸雅居租房挂牌（58 同城）</a></li>
+      <li><a href="https://m.58.com/haikou/xq/318169/" rel="noopener">龙珠新城租房挂牌（58 同城）</a></li>
       <li><a href="https://paper.people.com.cn/hwbwap/html/2024-03/08/content_26045613.htm" rel="noopener">海南异地就医备案</a></li>
-      <li>医院位置和车程：Google Maps</li>
+      <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x31522cf492dba065:0x74ea2a853531b2c1" rel="noopener">海南省人民医院位置（Google 地图）</a></li>
+      <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3153d2af33f3864b:0xbe933c00ee067493" rel="noopener">海口市人民医院位置（Google 地图）</a></li>
+      <li>车程和距离：Google 地图</li>
     </ul>
     <p>此页只做生活参考。</p>
   </section>
